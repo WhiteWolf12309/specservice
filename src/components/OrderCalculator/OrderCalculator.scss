@@ -1,0 +1,462 @@
+.order-calculator {
+    width: 750px;
+    height: auto;
+    z-index: 100;
+    position: fixed;
+
+    bottom: 30px;
+    right: 30px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0px 0px 30px rgba(44, 44, 44, 0.189);
+    padding: 10px;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+
+    &__inner {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        &__header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3px;
+
+            .header__title {
+                font-weight: 600;
+            }
+
+            .header__roll-up {
+                width: 20%;
+
+                cursor: pointer;
+                display: flex;
+                justify-content: space-evenly;
+
+                &__img {
+                    transition: transform 0.1s linear;
+                }
+            }
+        }
+
+        &__products {
+            padding: 3px;
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+            max-height: 300px;
+            overflow-y: auto;
+
+            .products__header {
+                display: flex;
+                font-size: 13px;
+                text-align: center;
+                margin-bottom: 10px;
+
+                &__title {
+                    width: 35%;
+                }
+
+                &__article {
+                    width: 20%;
+                }
+
+                &__count {
+                    width: 25%;
+                }
+
+                &__price {
+                    width: 20%;
+                }
+            }
+
+            .products__items {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+
+                &__item {
+                    display: flex;
+                    margin: 3px 0px;
+
+                    .title,
+                    .article,
+                    .count,
+                    .price {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 15px;
+                    }
+
+                    .title {
+                        width: 35%;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        line-height: 1.1;
+                    }
+
+                    .article,
+                    .price {
+                        width: 20%;
+                    }
+
+                    .article {
+                        font-size: 12px;
+                    }
+
+                    .count {
+                        width: 25%;
+                    }
+
+                    .count {
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
+
+                        &__action {
+                            width: 32px;
+                            height: 32px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            cursor: pointer;
+                            border-radius: 50px;
+                            background-color: #f1f1f1;
+                            transition: background-color 0.3s linear;
+
+                            &:hover {
+                                background-color: #dadada;
+                            }
+
+                            img {
+                                width: 60%;
+                                height: 60%;
+                            }
+
+                            &.red {
+                                transition: background-color 0.3s linear;
+
+                                &:hover {
+                                    background-color: #ffafaf;
+                                }
+                            }
+                        }
+
+                        &__total {
+                            font-size: 15px;
+                        }
+                    }
+
+                    .price {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        &__footer {
+            width: 100%;
+            border-top: 1px solid #eeeeee;
+            padding-top: 5px;
+            margin-top: 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .footer__price {
+                width: 30%;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+
+                &-text {
+                    font-size: 13px;
+                    color: #acacac;
+                    margin-right: 10px;
+                }
+
+                &-total {
+                    font-size: 30px;
+                    color: #444444;
+                    font-weight: 700;
+                }
+            }
+
+            .footer__buttons {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 90%;
+
+                &__call,
+                &__create-cheque,
+                &__clear-basket {
+                    padding: 10px 20px;
+                    text-align: center;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    cursor: pointer;
+
+                    .call__img,
+                    img {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+
+                &__call {
+                    border: 1px solid #cf9a11;
+                    transition: background-color 0.2s linear;
+                    margin-right: 11px;
+                    height: 25px;
+
+                    &:hover {
+                        background-color: #cf9a11;
+
+                        .call__phone-number {
+                            color: #fff;
+                        }
+
+                        .call__img path {
+                            fill: #fff;
+                        }
+                    }
+
+                    .call__phone-number {
+                        color: #cf9a11;
+                        font-weight: 600;
+                        margin-right: 10px;
+                        transition: color 0.2s linear;
+                    }
+
+                    .call__img path {
+                        transition: fill 0.2s linear;
+                    }
+                }
+
+                &__create-cheque {
+                    height: 27px;
+                    background-color: #cf9a11;
+                    transition: background-color 0.2s linear;
+
+                    &:hover {
+                        background-color: #ebaf17;
+                    }
+
+                    .create-cheque__text {
+                        color: #fff;
+                        font-weight: 600;
+                        margin-right: 10px;
+                    }
+                }
+
+                &__clear-basket {
+                    transition: color 0.3s linear;
+
+                    &:hover {
+                        color: #ff0101;
+
+                        .trash__img path {
+                            fill: #ff0101;
+                        }
+                    }
+
+                    .clear-basket__text {
+                        margin-right: 10px;
+                    }
+
+                    .trash__img {
+                        width: 20px;
+                        height: 20px;
+
+                        path {
+                            transition: fill 0.3s linear;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.order-calculator__mobile {
+    box-sizing: border-box;
+    display: none;
+    width: 100%;
+    height: auto;
+    z-index: 100;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    background-color: #fff;
+    box-shadow: 0px 0px 30px #00000035;
+
+    @media (max-width: 768px) {
+        display: block;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+
+        &__header {
+            padding: 10px 20px;
+            display: flex;
+            height: 60px;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 0px;
+
+            .header__clear,
+            .header__arrow {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50px;
+                height: 50px;
+
+                &__trash {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &__up-img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        .order-calculator__inner__products {
+            padding-bottom: 14px;
+            margin-top: 0px;
+        }
+
+        .order-calculator__inner__footer {
+            display: flex;
+            flex-direction: column;
+            margin-top: 0px;
+
+            .footer__buttons {
+                width: 100%;
+                height: 80px;
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                align-items: center;
+
+                &__call,
+                &__create-cheque {
+                    width: 38%;
+                    font-size: 17px;
+                    height: 30px;
+                }
+
+                &__call {
+                    margin-right: 10px;
+
+                    .call__phone-number {
+                        width: 100%;
+                        text-align: center;
+                    }
+
+                    .call__img {
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+
+                &__create-cheque {
+                    .create-cheque__text {
+                        width: 100%;
+                        text-align: center;
+                        font-weight: 600;
+                    }
+
+                    img {
+                        width: 25px;
+                        height: 25px;
+                    }
+                }
+            }
+
+            .footer__price {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+
+.products__items__item__mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3px 0px;
+
+    .title {
+        width: 80%;
+        font-size: 20px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        font-weight: 700;
+        margin: 10px 0px 5px 0px;
+    }
+
+    .other__data {
+        width: 75%;
+        max-width: 400px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .count__action {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ebebeb;
+            border-radius: 50px;
+
+            img {
+                width: 45%;
+                height: 45%;
+            }
+
+            &.red {
+                background-color: #ffafaf;
+            }
+        }
+
+        .count__total {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: 700;
+        }
+    }
+}
