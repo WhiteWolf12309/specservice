@@ -866,7 +866,7 @@ export const priceListData = [
     { id: "850", article: "", title: "Зарядное устройстройство Stark pro hf 24-55", price: "60200", group: "battery" },    
 
     // service-type-1
-    { id: "851", title: "Техническое обслуживание № 1 (через 1000 м/ч ,но не реже 1 раза в год)", price: "1,5 н.ч", group: "service-type-1", addition: "" },
+    { id: "851", title: "Техническое обслуживание № 1 (через 1000 м/ч ,но не реже 1 раза в год)", price: "1.5 н.ч", group: "service-type-1", addition: "" },
     { id: "852", title: "Техническое обслуживание № 2 (через 2000 м/ч, но не реже 1 раза в 2 года)", price: "2,5 н.ч", group: "service-type-1", addition: "" },
     { id: "853", title: "Диагностика неисправности (визуальный осмотр узлов, эл.оборудования, проводов, проверка предохранителей)", price: "1 н.ч", group: "service-type-1", addition: "" },
     { id: "854", title: "Диагностика с подключением ДО ( удаление ошибок, настройка параметров)", price: "3 н.ч", group: "service-type-1", addition: "" },
