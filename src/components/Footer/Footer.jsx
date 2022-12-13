@@ -23,7 +23,18 @@ const Footer = () => {
                     </div>
                     <nav className="footer__inner__nav">
 
-                        <a href='/' className="nav__link">Главная</a>
+                        <AnimateLink
+                            className='nav-link'
+                            activeClass="active"
+                            to='intro'
+                            spy={true}
+                            smooth={true}
+                            offset={-100}
+                            duration={500}
+                            style={navLinkStyles}
+                        >Главная
+                        </AnimateLink>
+                            
                         <AnimateLink
                             className='nav__link'
                             to='price-list'
