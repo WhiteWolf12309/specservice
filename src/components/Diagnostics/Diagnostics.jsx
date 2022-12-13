@@ -1,6 +1,6 @@
 
 import React from 'react';
-import DiagnosticsImage from '../../assets/images/DiagnosticsImage.png';
+import DiagnosticsImage from '../../assets/images/diagnosticsImage.png';
 import DiagnosticsCar from '../Icons/DiagnosticsCar/DiagnosticsCar';
 import DiagnosticsEngine from '../Icons/DiagnosticsEngine/DiagnosticsEngine';
 import DiagnosticsShield from '../Icons/DiagnosticsShield/DiagnosticsShield';
