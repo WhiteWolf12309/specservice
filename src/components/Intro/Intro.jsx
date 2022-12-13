@@ -10,8 +10,6 @@ import IntroArrow from '../../components/Icons/IntroArrow/introArrow';
 import './Intro.scss';
 
 const Intro = () => {
-    // style={{ backgroundImage: `url(${IntrobackgroundImage})` }}
-
     return (
         <div 
             className='intro' 

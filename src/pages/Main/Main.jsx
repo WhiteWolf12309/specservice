@@ -18,7 +18,6 @@ const Main = () => {
             <AboutUs />
             <PriceList />
             <Footer />
-            
         </div>
     );
 }

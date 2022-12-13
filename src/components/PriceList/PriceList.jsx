@@ -28,7 +28,6 @@ const PriceList = () => {
             // if elements of sortedPriceList >= 13
             for (let i = 0; i < 12 * pageIndex.current; i++) {
                 newSortedData.push(sortedPriceList[i])
-                console.log(pageIndex.current)
             }
         }
 
@@ -52,7 +51,6 @@ const PriceList = () => {
 
                                     
         if (searchInputValue === "" && filterServicesStatus === false && (priceValues.from === "" || priceValues.from === "0" && priceValues.to === "" || priceValues.to === "0")) {
-            console.log("FILTER not changed")
             // Nothing happend, then we just need to add unsorted list to sorted
             setSortedPriceList(priceList)
         } else {
@@ -494,8 +492,6 @@ const PriceList = () => {
                                     
                                 </div>
                             </div>
-                        
-
                         
                         {!priceValues.from && !priceValues.to && (
                             <div className="filter__item">
