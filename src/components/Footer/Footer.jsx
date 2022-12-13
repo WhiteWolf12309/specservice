@@ -24,7 +24,7 @@ const Footer = () => {
                     <nav className="footer__inner__nav">
 
                         <AnimateLink
-                            className='nav-link'
+                            className='nav__link'
                             to='intro'
                             spy={true}
                             smooth={true}
