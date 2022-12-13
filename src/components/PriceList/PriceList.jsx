@@ -461,7 +461,10 @@ const PriceList = () => {
                     transition={{ type: 'linear' }}
                 >
                     <div className="mobile-filter__list__inner">
-                        <div className="close__cross" onClick={setFilterList}>
+                        <div 
+                            className="close__cross" 
+                            onClick={setFilterList}    
+                        >
                             <img src={FilterListCross} />
                         </div>
 
@@ -643,7 +646,7 @@ const PriceList = () => {
 
                                     <button 
                                         className="apply__filters"
-                                        onClick={applyFiltersAndSearch} 
+                                        onClick={applyFiltersAndSearch}
                                         >Применить фильтры</button>
                                     <button
                                         onClick={clearFilters}
