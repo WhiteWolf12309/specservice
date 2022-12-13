@@ -25,13 +25,11 @@ const Footer = () => {
 
                         <AnimateLink
                             className='nav-link'
-                            activeClass="active"
                             to='intro'
                             spy={true}
                             smooth={true}
                             offset={-100}
                             duration={500}
-                            style={navLinkStyles}
                         >Главная
                         </AnimateLink>
                             
