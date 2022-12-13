@@ -52,7 +52,7 @@ export const priceListData = [
     { id: "41", article: "", title: "Масло гидравлическое (68)", price: "450", group: "another" },
     { id: "42", article: "", title: "Масло моторное", price: "450", group: "another" },
     { id: "43", article: "", title: "Масло трансмиссионное", price: "490", group: "another" },
-    { id: "44", article: "TVH/4504883", title: "Мотор вакуумный TVH/4504883", price: "9365.12", group: "another" },
+    { id: "44", article: "TVH/4504883", title: "Мотор вакуумный TVH/4504883", price: "9365", group: "another" },
     { id: "45", article: "", title: "Накладка педали тормоза", price: "850", group: "another" },
     { id: "46", article: "TVH/147TA3018", title: "Нижняя часть сиденье", price: "14700", group: "another" },
     { id: "47", article: "LINDE/3514338001", title: "Нижняя часть сиденья, Linde", price: "26400", group: "another" },
