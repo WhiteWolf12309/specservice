@@ -53,6 +53,17 @@ const Footer = () => {
                         >
                             О нас
                         </AnimateLink>
+                        <AnimateLink
+                            className='nav__link'
+                            to='vacancy'
+                            spy={true}
+                            smooth={true}
+                            offset={-100}
+                            duration={500}
+                        >
+                            Вакансии
+                        </AnimateLink>
+
                     </nav>
 
                     <AnimateLink

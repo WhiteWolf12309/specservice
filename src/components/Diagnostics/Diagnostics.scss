@@ -31,7 +31,7 @@
                 width: 300px;
                 height: 250px;
                 border-radius: 16px;
-                transition: box-shadow 0.3s linear;
+                transition: box-shadow 0.3s linear, transform 0.2s linear;
                 padding: 10px 20px;
                 text-align: center;
 
@@ -61,18 +61,11 @@
                 }
 
                 &:hover {
+                    transform: translateY(-3px);
                     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
                 }
 
-                &:hover .diagnostics__shield path {
-                    fill: #cf9a11;
-                }
-
-                &:hover .diagnostics__engine path {
-                    fill: #cf9a11;
-                }
-
-                &:hover .diagnostics__car path {
+                &:hover .diagnostics__image path {
                     fill: #cf9a11;
                 }
 
@@ -80,9 +73,7 @@
                     color: #cf9a11;
                 }
 
-                .diagnostics__shield,
-                .diagnostics__engine,
-                .diagnostics__car {
+                .diagnostics__image {
                     @media (max-width: 992px) {
                         width: 110px;
                     }

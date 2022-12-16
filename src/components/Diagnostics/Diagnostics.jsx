@@ -1,9 +1,9 @@
 
 import React from 'react';
-import DiagnosticsImage from '../../assets/images/diagnosticsImage.png';
-import DiagnosticsCar from '../Icons/DiagnosticsCar/DiagnosticsCar';
+import DiagnosticsImage from '../../assets/images/diagnosticsImage.webp';
 import DiagnosticsEngine from '../Icons/DiagnosticsEngine/DiagnosticsEngine';
 import DiagnosticsShield from '../Icons/DiagnosticsShield/DiagnosticsShield';
+import WarehouseLoader from '../Icons/Warehouseloader/WarehouseLoader';
 import SectionTitle from '../SectionTitle/SectionTitle';
 
 
@@ -18,17 +18,17 @@ const Diagnostics = () => {
 
                     <div className="diagnostics__inner__content">
                         <div className="diagnostics__item">
-                            <DiagnosticsShield className={"diagnostics__shield"} fill={"#343434"} />
+                            <DiagnosticsShield className={"diagnostics__image"} fill={"#343434"} />
                             <div className="diagnostics__item__title">Проверка гидравлической системы</div>
                         </div>
 
                         <div className="diagnostics__item">
-                            <DiagnosticsEngine className={"diagnostics__engine"} fill={"#343434"} />
+                            <DiagnosticsEngine className={"diagnostics__image"} fill={"#343434"} />
                             <div className="diagnostics__item__title">Осмотр двигателя</div>
                         </div>
 
                         <div className="diagnostics__item">
-                            <DiagnosticsCar className={"diagnostics__car"} fill={"#343434"} />
+                            <WarehouseLoader className={"diagnostics__image"} />
                             <div className="diagnostics__item__title">Проверка рабочих узлов, мостов и ходовой части</div>
                         </div>
                     </div>   

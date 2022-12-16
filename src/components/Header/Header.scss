@@ -36,6 +36,17 @@
                     display: none;
                 }
             }
+
+            .logo__img {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: auto;
+                padding: 4px;
+                height: 45px;
+                border-radius: 4px;
+                background-color: #fff;
+            }
         }
 
         &__nav {
@@ -62,14 +73,14 @@
 
             .nav-link {
                 padding: 20px 0px;
-                color: rgba(255, 255, 255, 0.574);
+                color: rgba(209, 209, 209, 0.736) !important;
                 cursor: pointer;
                 transition: color 0.3s linear, border-bottom 0.3s linear;
                 font-size: 16px;
                 border-bottom: 2px solid transparent;
 
                 &:hover {
-                    color: #fff;
+                    color: #fff !important;
                     border-bottom: 2px solid #cf9a11;
                 }
 
@@ -79,6 +90,10 @@
 
                 @media (max-width: 425px) {
                     display: none;
+                }
+
+                &.scrolled {
+                    color: #232323 !important;
                 }
             }
         }
@@ -139,6 +154,11 @@
                     &__contact {
                         font-size: 14px;
                         font-weight: bold;
+                        transition: color 0.2s linear;
+
+                        &:hover {
+                            color: #cf9a11;
+                        }
 
                         @media (max-width: 992px) {
                             font-size: 10px;

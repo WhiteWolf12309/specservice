@@ -55,12 +55,14 @@ function Header() {
                 <div className="container">
                     <div className="header__inner">
                         <a href='/' className="header__inner__logo">
-                            <img src={Logo} alt="СК СпецСервис" />
+                            <div className="logo__img">
+                                <img src={Logo} alt="СК СпецСервис" />
+                            </div>
                             <div className="logo-title">СК СпецСервис</div>
                         </a>
                         <nav className="header__inner__nav">
                             <AnimateLink
-                                className='nav-link'
+                                className={isScrolled ? "nav-link scrolled" : "nav-link"}
                                 activeClass="active"
                                 to='intro'
                                 spy={true}
@@ -72,7 +74,7 @@ function Header() {
                             </AnimateLink>
                             
                             <AnimateLink
-                                className='nav-link'
+                                className={isScrolled ? "nav-link scrolled" : "nav-link"}
                                 activeClass="active"
                                 to='price-list'
                                 spy={true}
@@ -84,7 +86,7 @@ function Header() {
                             </AnimateLink>
 
                             <AnimateLink
-                                className='nav-link'
+                                className={isScrolled ? "nav-link scrolled" : "nav-link"}
                                 activeClass="active"
                                 to='about-us'
                                 spy={true}
@@ -93,6 +95,18 @@ function Header() {
                                 duration={500}
                                 style={navLinkStyles}
                             >О нас
+                            </AnimateLink>
+
+                            <AnimateLink
+                                className={isScrolled ? "nav-link scrolled" : "nav-link"}
+                                activeClass="active"
+                                to='vacancy'
+                                spy={true}
+                                smooth={true}
+                                offset={-100}
+                                duration={500}
+                                style={navLinkStyles}
+                            >Вакансии
                             </AnimateLink>
 
 

@@ -3,7 +3,7 @@ import React from 'react';
 import { Link as AnimateLink } from "react-scroll";
 import IntroDelivery from '../../assets/images/intro_delivery.svg';
 import IntroEmail from '../../assets/images/intro_email.svg';
-import IntrobackgroundImage from '../../assets/images/Intro_image.png';
+import IntrobackgroundImage from '../../assets/images/Intro_image.webp';
 import IntroPhone from '../../assets/images/intro_phone.svg';
 import IntroPoint from '../../assets/images/intro_point.svg';
 import IntroArrow from '../../components/Icons/IntroArrow/introArrow';
