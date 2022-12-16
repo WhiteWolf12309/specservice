@@ -195,6 +195,18 @@ function Header() {
                                 >О нас
                                 </AnimateLink>
 
+                                <AnimateLink
+                                    onClick={setBurgerMenu}
+                                    className='navbar__inner__link'
+                                    activeClass="active"
+                                    to='about-us'
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-100}
+                                    duration={500}
+                                >Вакансии
+                                </AnimateLink>
+
                             </div>
                         </div>
                     </nav>
