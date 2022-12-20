@@ -209,7 +209,7 @@ const PriceList = () => {
                     
                     <div className="price-list__content">
                         <div className="filter">
-                            <div className="filter__item">
+                            {/* <div className="filter__item">
                                 <div className="filter__item__title">Цена</div>
                                 <div className="filter__item__content">
                                     
@@ -236,7 +236,7 @@ const PriceList = () => {
                                     </div>
                                   
                                 </div>
-                            </div>
+                            </div> */}
 
                             <div className="filter__item">
                                 <div className="filter__item__title">Услуги</div>
@@ -466,7 +466,7 @@ const PriceList = () => {
                             <img src={FilterListCross} />
                         </div>
 
-                            <div className="filter__item">
+                            {/* <div className="filter__item">
                                 <div className="filter__item__title">Цена</div>
                                 <div className="filter__item__content">
                                     
@@ -491,7 +491,7 @@ const PriceList = () => {
                                     </div>
                                     
                                 </div>
-                            </div>
+                            </div> */}
                         
                         {!priceValues.from && !priceValues.to && (
                             <div className="filter__item">
