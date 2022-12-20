@@ -12,7 +12,7 @@
         align-items: flex-start;
         flex-wrap: wrap;
 
-        @media (max-width: 576px) {
+        @media (max-width: 768px) {
             flex-direction: row;
         }
 
@@ -25,6 +25,10 @@
             padding: 10px 20px;
             border-radius: 8px;
             transition: transform 0.2s linear;
+
+            @media (max-width: 768px) {
+                width: 100%;
+            }
 
             @media (max-width: 576px) {
                 width: 100%;
