@@ -12,6 +12,10 @@
         align-items: flex-start;
         flex-wrap: wrap;
 
+        @media (max-width: 576px) {
+            flex-direction: row;
+        }
+
         &__item {
             position: relative;
             background-color: #fff;
@@ -21,6 +25,10 @@
             padding: 10px 20px;
             border-radius: 8px;
             transition: transform 0.2s linear;
+
+            @media (max-width: 576px) {
+                width: 100%;
+            }
 
             &:hover {
                 transform: translateY(-3px);

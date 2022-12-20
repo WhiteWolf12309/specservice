@@ -80,9 +80,9 @@ const Cheque = () => {
                                 </div>
 
                                 {item.group !== 'service-type-1' && item.group !== 'service-type-2' ? (
-                                    <div className="content__item__price">{item.price * item.count}₽</div>
+                                    <div className="content__item__price">Цена по запросу</div>
                                 ) : (
-                                    <div className="content__item__price">{item.price}</div>
+                                    <div className="content__item__price">{item.price} нормо-час</div>
                                 )}
                             </div>
                         ))}

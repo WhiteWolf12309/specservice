@@ -1,7 +1,7 @@
 
 import React from 'react';
-import AboutUsIImage1 from '../../assets/images/about-us_image-1.png';
-import AboutUsIImage2 from '../../assets/images/about-us_image-2.png';
+import AboutUsIImage1 from '../../assets/images/about-us_first.webp';
+import AboutUsIImage2 from '../../assets/images/about-us_second.webp';
 import SectionTitle from '../SectionTitle/SectionTitle';
 import './AboutUs.scss';
 

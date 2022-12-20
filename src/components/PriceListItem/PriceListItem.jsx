@@ -15,7 +15,7 @@ const PriceListItem = ({ id, title, article, price, group, addition }) => {
     const addServiceToOrderCalculator = () => dispatch(addService({ id, title, addition, price, group }))
 
     return (
-        <AnimatePresence >
+        <AnimatePresence>
             <motion.div 
                 className="products__inner__item"
                 onClick={isSpare ? addToOrderCalculator : addServiceToOrderCalculator}
@@ -40,7 +40,14 @@ const PriceListItem = ({ id, title, article, price, group, addition }) => {
 
                 <div className="products__inner__item__price">
                     <div className="price__text">{isSpare ? "Цена:" : "Время:"}</div>
-                    <div className="price__count">{price}{isSpare && "₽"}</div>
+
+                    { isSpare ? (
+                        <div className="price__count">По запросу</div>
+                    ) : (
+                        <div className="price__count">{price} нормо-час</div>
+                    ) }
+
+                    
                 </div>
             </motion.div>
         </AnimatePresence>

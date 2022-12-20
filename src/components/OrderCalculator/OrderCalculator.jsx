@@ -56,7 +56,7 @@ const OrderCalculatorItemMobile = ({ id, title, price, count, group }) => {
                             <img src={CountAdd} alt="add" />
                         </div>
 
-                        {isSpares && <div className="price">{(price * count).toLocaleString("ru")}₽</div>}
+                        {isSpares && <div className="price">Цена по запросу</div>}
                     </>
                 ) : (
                     <>
@@ -86,7 +86,7 @@ const OrderCalculatorItemMobile = ({ id, title, price, count, group }) => {
                             <img src={CountAdd} alt="add" />
                         </div>
 
-                        {isSpares && <div className="price">{(price * count).toLocaleString("ru")}₽</div>}
+                        <div className="price">{price} нормо-час</div>                        
                     </>
                 )}
             </div>
@@ -103,10 +103,10 @@ const OrderCalculatorItem = ({ id, title, article, price, count, group }) => {
 
     const dispatch = useDispatch()
     
-    const addItemCountOrderCalculator = () => dispatch(addProductItemCount({ id, price }))
-    const substractItemCountOrderCalculator = () => dispatch(substractProductItemCount({ id, price }))
-    const removeItemOrderCalculator = () => dispatch(removeProductItem({ id, totalPrice: price * count }))
-    const removeServiceOrderCalculator = () => dispatch(removeService({ id }))
+    const addItemCountOrderCalculator = () => dispatch(addProductItemCount({ id, price, group }))
+    const substractItemCountOrderCalculator = () => dispatch(substractProductItemCount({ id, price, group }))
+    const removeItemOrderCalculator = () => dispatch(removeProductItem({ id, totalPrice: price * count, group }))
+    const removeServiceOrderCalculator = () => dispatch(removeService({ id, price, group }))
     
 
     return (
@@ -167,9 +167,9 @@ const OrderCalculatorItem = ({ id, title, article, price, count, group }) => {
             )}
             
             {isSpares ? (
-                <div className="price">{(price * count).toLocaleString("ru")}₽</div>
+                <div className="price">По запросу</div>
             ) : (
-                <div className="price">{price}</div>
+                <div className="price">{price} нормо-час</div>
             )}
         </div>
     )

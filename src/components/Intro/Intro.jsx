@@ -39,8 +39,9 @@ const Intro = () => {
                                 <div className="data__element__item">
                                     <img className="item__image" src={IntroPhone} />
                                     <div className="item__data">
-                                        <div className="item__data__title">Наш номер телефона:</div>
-                                        <a href='tel:+79086362937' className="item__data__content">+7 908 636 29 37</a>
+                                        <div className="item__data__title">Наши номера телефонов:</div>
+                                        <a href='tel:+79041714528' className="item__data__content">+7 904 171 45 28</a>
+                                        <a href='tel:+79221137455' className="item__data__content">+7 922 113 74 55</a>
                                     </div>
                                 </div>
                                 <div className="data__element__item">

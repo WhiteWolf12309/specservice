@@ -288,7 +288,7 @@
                             flex-direction: column;
 
                             &__title {
-                                font-weight: 400;
+                                font-weight: 700;
                                 font-size: 14px;
                                 line-height: 16px;
 
@@ -299,7 +299,7 @@
 
                             &__content {
                                 font-weight: 400;
-                                font-size: 18px;
+                                font-size: 16px;
 
                                 @media (max-width: 1200px) {
                                     font-size: 16px;

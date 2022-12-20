@@ -58,6 +58,7 @@ function Header() {
                             <div className="logo__img">
                                 <img src={Logo} alt="СК СпецСервис" />
                             </div>
+
                             <div className="logo-title">СК СпецСервис</div>
                         </a>
                         <nav className="header__inner__nav">
@@ -116,7 +117,7 @@ function Header() {
                                 <HeaderPhone className={"contacts__image"} fill={isScrolled ? "#343434" : "#fff"} />
                                 <div className="contacts__info">
                                     <div className="contacts__info__title">Контакты:</div>
-                                    <a href='tel:+79086362937' className="contacts__info__contact">+7 908 636 29 37</a>
+                                    <a href='tel:+79041714528' className="contacts__info__contact">+7 904 171 45 28</a>
                                 </div>
                             </div>
 
@@ -199,7 +200,7 @@ function Header() {
                                     onClick={setBurgerMenu}
                                     className='navbar__inner__link'
                                     activeClass="active"
-                                    to='about-us'
+                                    to='vacancy'
                                     spy={true}
                                     smooth={true}
                                     offset={-100}
