@@ -126,7 +126,6 @@ const calculatorSlice = createSlice({
             } else {
                 for (let i = 0; i < state.basket.length; i++) {
                     if (state.basket[i].id === action.payload.id) {
-                        state.totalPrice += parseInt(action.payload.price, 10) * 1000
                         return;
                     }
                 }
