@@ -348,7 +348,7 @@ const OrderCalculator = () => {
                                 </div>
                             </div>
                             <div className="footer__buttons">       
-                                <a href='tel:+7 908 636 29 37' className="footer__buttons__call">
+                                <a href='tel:+79041714528' className="footer__buttons__call">
                                     <div  className="call__phone-number">Позвонить нам</div>
                                 </a>
                                 <Link 

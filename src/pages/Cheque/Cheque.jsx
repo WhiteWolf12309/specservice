@@ -99,7 +99,7 @@ const Cheque = () => {
                 </div>
 
             <div className="cheque__buttons">
-                <a href='tel:+79086362937' className="cheque__buttons__call">
+                <a href='tel:+79041714528' className="cheque__buttons__call">
                     <div className="call__text">Позвонить нам</div>
                     <HeaderPhone fill={"#fff"} />
                 </a>
