@@ -1,4 +1,5 @@
 
+import { motion } from 'framer-motion';
 import React from 'react';
 import DiagnosticsImage from '../../assets/images/diagnosticsImage.webp';
 import DiagnosticsEngine from '../Icons/DiagnosticsEngine/DiagnosticsEngine';
@@ -10,27 +11,47 @@ import SectionTitle from '../SectionTitle/SectionTitle';
 import './Diagnostics.scss';
 
 const Diagnostics = () => {
+
+    const itemAnimation = {
+        hidden: {
+            y: -50,
+            opacity: 0,
+            transition: { delay: 0.2,  duration: 0.25 }
+        },
+        visible: custom => ({
+            y: 0,
+            opacity: 1,
+            transition: { delay: custom * 0.2,  duration: 0.25 }
+        })
+    }
+
+
     return (
-        <div className="diagnostics section">
+        <motion.div 
+            className="diagnostics section"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: 0.2, once: true }}
+            >
             <div className="container">
                 <div className="diagnostics__inner">
                     <SectionTitle title={"Как происходит диагностика автопогрузчиков"} />
 
                     <div className="diagnostics__inner__content">
-                        <div className="diagnostics__item">
+                        <motion.div custom={1} variants={itemAnimation} className="diagnostics__item">
                             <DiagnosticsShield className={"diagnostics__image"} fill={"#343434"} />
                             <div className="diagnostics__item__title">Проверка гидравлической системы</div>
-                        </div>
+                        </motion.div>
 
-                        <div className="diagnostics__item">
+                        <motion.div custom={2} variants={itemAnimation} className="diagnostics__item">
                             <DiagnosticsEngine className={"diagnostics__image"} fill={"#343434"} />
                             <div className="diagnostics__item__title">Осмотр двигателя</div>
-                        </div>
+                        </motion.div>
 
-                        <div className="diagnostics__item">
+                        <motion.div custom={3} variants={itemAnimation} className="diagnostics__item">
                             <WarehouseLoader className={"diagnostics__image"} />
                             <div className="diagnostics__item__title">Проверка рабочих узлов, мостов и ходовой части</div>
-                        </div>
+                        </motion.div>
                     </div>   
                 </div>
             </div>
@@ -45,7 +66,7 @@ const Diagnostics = () => {
                 </div>
             </div>
 
-        </div>
+        </motion.div>
     );
 }
 

@@ -1,4 +1,5 @@
 
+import { motion } from 'framer-motion';
 import React from 'react';
 import { Link as AnimateLink } from "react-scroll";
 import IntroDelivery from '../../assets/images/intro_delivery.svg';
@@ -9,17 +10,51 @@ import IntroPoint from '../../assets/images/intro_point.svg';
 import IntroArrow from '../../components/Icons/IntroArrow/introArrow';
 import './Intro.scss';
 
+
+
+
 const Intro = () => {
+
+    const textAnimation = {
+        hidden: {
+            x: -100,
+            opacity: 0,
+            transition: { duration: 0.5 }
+        },
+        visible: {
+            x: 0,
+            opacity: 1,
+            transition: { delay: 0.2,  duration: 0.5 }
+        }
+    }
+
+    const contactDataAnimation = {
+        hidden: {
+            x: 100,
+            opacity: 0,
+            transition: { duration: 1 }
+        },
+        visible: custom => ({
+            x: 0,
+            opacity: 1,
+            transition: { delay: custom * 0.5, duration: 0.8 }
+        })
+    }
+
     return (
-        <div 
+        <motion.div 
             className='intro' 
             style={{ background: `url(${IntrobackgroundImage}) no-repeat center, rgb(62, 62, 62)` }} 
-            id="intro" >
+            id="intro" 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            >
             <div className="container">
                 <div className="intro__inner">
-                    <div className="intro__inner__content">
+                    <motion.div variants={textAnimation} className="intro__inner__content">
                         <div className="content__title">Мы - причина бесперебойной работы вашей складской техники</div>
-                        <div className="content__subtitle">Мы открыты к сотрудничеству и готовы оказать помощь, даже в самых сложных ситуациях. <br /> Работаем с 2014 года</div>
+                        <div  className="content__subtitle">Мы открыты к сотрудничеству и готовы оказать помощь, даже в самых сложных ситуациях. <br /> Работаем с 2014 года</div>
                         <AnimateLink
                             className='content__btn'
                             to='price-list'
@@ -31,9 +66,9 @@ const Intro = () => {
                             <div className="content__btn-text">Прайс-лист</div>
                             <IntroArrow className={"content__btn-img"} fill={"#cf9a11"} />
                         </AnimateLink>
-                    </div>
+                    </motion.div>
                     <div className="intro__inner__data">
-                        <div className="data__element">
+                        <motion.div custom={1} variants={contactDataAnimation} className="data__element">
                             <div className="data__element__title">Контактные данные</div>
                             <div className="data__element__items">
                                 <div className="data__element__item">
@@ -52,8 +87,8 @@ const Intro = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="data__element">
+                        </motion.div>
+                        <motion.div custom={2} variants={contactDataAnimation} className="data__element">
                             <div className="data__element__title">Регионы работы</div>
                             <div className="data__element__items">
                                 <div className="data__element__item">
@@ -71,11 +106,11 @@ const Intro = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 }
 
