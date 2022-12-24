@@ -75,16 +75,50 @@
                 color: #959595;
             }
 
-            .vacancy__wage {
+            .vacancy__footer {
                 width: 100%;
-                text-align: right;
-                font-size: 15px;
-                color: #828282;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 20px;
 
-                .wage {
-                    font-weight: 800;
-                    color: #646464;
-                    font-size: 27px;
+                .vacancy__wage {
+                    width: 40%;
+                    font-size: 15px;
+                    color: #828282;
+                    line-height: 1.1;
+
+                    .wage {
+                        font-weight: 800;
+                        color: #646464;
+                        font-size: 27px;
+                    }
+                }
+
+                .vacancy__send-vacancy {
+                    font-size: 13.5px;
+                    border-radius: 6px;
+                    background-color: transparent;
+                    font-weight: 600;
+                    padding: 10px 20px;
+                    cursor: pointer;
+                    transition: background-color 0.2s linear;
+
+                    &.blue {
+                        color: #9382ff;
+
+                        &:hover {
+                            background-color: #f5f4fd;
+                        }
+                    }
+
+                    &.orange {
+                        color: #d28529;
+
+                        &:hover {
+                            background-color: #fff3e4;
+                        }
+                    }
                 }
             }
         }

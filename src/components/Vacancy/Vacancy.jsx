@@ -10,6 +10,7 @@ const VacancyItem = ({ title, description, wage, line_type }) => {
             <div className={`line ${line_type}`}></div>
             <div className="vacancy__title">{title}</div>
             <div className="vacancy__description">{description}</div>
+            
             <div className="vacancy__wage">Заработная плата <span className="wage">{wage}</span> рублей</div>
         </div>
     )
@@ -18,16 +19,13 @@ const VacancyItem = ({ title, description, wage, line_type }) => {
 
 const Vacancy = () => {
 
-    
-
-
     return (
         <div className="vacancy" id="vacancy">
             <SectionTitle title={"Вакансии"} />
 
             <div className="container">
                 <div className="vacancy__inner">
-                    <div className="vacancy__inner__item">                        
+                    <a href='mailto:specservis.info@gmail.com' className="vacancy__inner__item">                        
                         <div className="line blue"></div>
                         <div className="vacancy__title">Механик по ремонту погрузчиков</div>
                         <div className="vacancy__description">
@@ -36,14 +34,21 @@ const Vacancy = () => {
                             <div className="description">Наличие автомобиля приветствуется</div>
                             <div className="description">Без вредных привычек</div>
                         </div>
-                        <div className="vacancy__wage">Заработная плата <span className="wage">{(50000).toLocaleString("ru")}</span> рублей</div>
-                    </div>
 
-                    <div className="vacancy__inner__item">                        
+                        <div className="vacancy__footer">
+                            <div className="vacancy__wage">Заработная плата <span className="wage">{(50000).toLocaleString("ru")}</span> рублей</div>
+                            <a href='mailto:specservis.info@gmail.com' className="vacancy__send-vacancy blue">Отправить своё резюме</a>
+                        </div>
+                    </a>
+
+                    <a href='mailto:specservis.info@gmail.com' className="vacancy__inner__item">                        
                         <div className="line orange"></div>
                         <div className="vacancy__title">Сервис-менеджер</div>
-                        <div className="vacancy__wage">Заработная плата <span className="wage">{(50000).toLocaleString("ru")}</span> рублей</div>
-                    </div>
+                        <div className="vacancy__footer">
+                            <div className="vacancy__wage">Заработная плата <span className="wage">{(50000).toLocaleString("ru")}</span> рублей</div>
+                            <div className="vacancy__send-vacancy orange">Отправить своё резюме</div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
