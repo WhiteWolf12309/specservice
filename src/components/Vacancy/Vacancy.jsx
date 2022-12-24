@@ -3,19 +3,6 @@ import React from 'react';
 import SectionTitle from '../SectionTitle/SectionTitle';
 import './Vacancy.scss';
 
-const VacancyItem = ({ title, description, wage, line_type }) => {
-
-    return (
-        <div className="vacancy__inner__vacancy">
-            <div className={`line ${line_type}`}></div>
-            <div className="vacancy__title">{title}</div>
-            <div className="vacancy__description">{description}</div>
-            
-            <div className="vacancy__wage">Заработная плата <span className="wage">{wage}</span> рублей</div>
-        </div>
-    )
-}
-
 
 const Vacancy = () => {
 
