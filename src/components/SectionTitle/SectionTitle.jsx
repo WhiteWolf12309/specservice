@@ -3,7 +3,7 @@ import React from 'react';
 import './SectionTitle.scss';
 
 
-const SectionTitle = ({ title }) => {
+const SectionTitle = ({ title, addition }) => {
     return (
         <div className='section-title'>
             <div className="title">{title}</div>

@@ -40,12 +40,6 @@ const Vacancy = () => {
                     </div>
 
                     <div className="vacancy__inner__item">                        
-                        <div className="line green"></div>
-                        <div className="vacancy__title">Слесарь-механик</div>
-                        <div className="vacancy__wage">Заработная плата <span className="wage">{(40000).toLocaleString("ru")}</span> рублей</div>
-                    </div>
-
-                    <div className="vacancy__inner__item">                        
                         <div className="line orange"></div>
                         <div className="vacancy__title">Сервис-менеджер</div>
                         <div className="vacancy__wage">Заработная плата <span className="wage">{(50000).toLocaleString("ru")}</span> рублей</div>

@@ -54,7 +54,7 @@ const Intro = () => {
                 <div className="intro__inner">
                     <motion.div variants={textAnimation} className="intro__inner__content">
                         <div className="content__title">Мы - причина бесперебойной работы вашей складской техники</div>
-                        <div  className="content__subtitle">Мы открыты к сотрудничеству и готовы оказать помощь, даже в самых сложных ситуациях. <br /> Работаем с 2014 года</div>
+                        <div  className="content__subtitle">Мы открыты к сотрудничеству и готовы оказать помощь, даже в самых сложных ситуациях. <br /> Работаем с 2015 года</div>
                         <AnimateLink
                             className='content__btn'
                             to='price-list'
