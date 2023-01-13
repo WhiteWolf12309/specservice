@@ -1,13 +1,12 @@
 
 import { motion } from 'framer-motion';
 import React, { useEffect, useRef, useState } from 'react';
+import { useSelector } from 'react-redux';
 import FilterListCross from '../../assets/images/filter-list_cross.svg';
 import Filter from '../../assets/images/price-list_filter.svg';
 import PriceListMagnifier from '../../assets/images/price-list_magnifier.svg';
 import PriceListMorePlus from '../../components/Icons/PriceListMorePlus/PriceListMorePlus';
 import { priceListData } from '../../priceList/priceList';
-
-import { useSelector } from 'react-redux';
 import OrderCalculator from '../OrderCalculator/OrderCalculator';
 import PriceListItem from '../PriceListItem/PriceListItem';
 import SectionTitle from '../SectionTitle/SectionTitle';
@@ -38,8 +37,9 @@ const PriceList = () => {
         // Main function of items search
 
         // =================== [FILTRATION] ======================
-        const filterServicesStatus = filterPoints['service-type-1'] 
+        const filterServicesStatus =   filterPoints['service-type-1'] 
                                     || filterPoints['service-type-2']
+                                    || filterPoints['service-type-3']
                                     || filterPoints['engine']
                                     || filterPoints['electric stacker']
                                     || filterPoints['controlled bridge']
@@ -63,13 +63,12 @@ const PriceList = () => {
                 max: parseInt(priceValues.to, 10) || 1000000,
             }
                     
-            newPriceList = newPriceList.filter(({ price, group }) => {
+            newPriceList = newPriceList.filter(({ price }) => {
                 if (parseInt(price, 10) > MinMaxDiap.min && parseInt(price, 10) <= MinMaxDiap.max) {
                     return true
                 }
             })
             setSortedPriceList(prev => newPriceList)
-            
 
             if (filterServicesStatus === false) { 
                 // if filters not changed
@@ -117,6 +116,7 @@ const PriceList = () => {
     const [filterPoints, setFilterPoints] = useState({
         'service-type-1': false,
         'service-type-2': false,
+        'service-type-3': false,
         'engine': false,
         'electric stacker': false,
         'controlled bridge': false,
@@ -132,14 +132,19 @@ const PriceList = () => {
     }, [sortedPriceList])
 
     useEffect(() => {
-        setFilterPoints({...priceValues, 'service-type-1': false, 'service-type-2': false })
+        setFilterPoints({...priceValues, 
+                        'service-type-1': false, 
+                        'service-type-2': false, 
+                        'service-type-3': false 
+                    })
     }, [priceValues.from, priceValues.to])
 
-    const setPriceValueFrom = (e) => setPriceValues({ ...priceValues, from: e.target.value })
-    const setPriceValueTo = (e) => setPriceValues({ ...priceValues, to: e.target.value })
+    // const setPriceValueFrom = (e) => setPriceValues({ ...priceValues, from: e.target.value })
+    // const setPriceValueTo = (e) => setPriceValues({ ...priceValues, to: e.target.value })
     
     const setServiceType1 = () => setFilterPoints({ ...filterPoints, 'service-type-1': !filterPoints["service-type-1"] })
     const setServiceType2 = () => setFilterPoints({ ...filterPoints, 'service-type-2': !filterPoints["service-type-2"] })
+    const setServiceType3 = () => setFilterPoints({ ...filterPoints, 'service-type-3': !filterPoints["service-type-3"] })
 
     const setSparesEngine = () => setFilterPoints({ ...filterPoints, 'engine': !filterPoints["engine"] })
     const setServiceElectricStacker = () => setFilterPoints({ ...filterPoints, 'electric stacker': !filterPoints["electric stacker"] })
@@ -149,7 +154,7 @@ const PriceList = () => {
     const setServiceTires = () => setFilterPoints({ ...filterPoints, 'tires': !filterPoints["tires"] })
     const setServiceBattery = () => setFilterPoints({ ...filterPoints, 'battery': !filterPoints["battery"] })
     const setServiceAnother = () => setFilterPoints({ ...filterPoints, 'another': !filterPoints["another"] })
-
+    
     
     const clearFilters = () => {
         setPriceValues({ ...priceValues, from: '', to: '' })
@@ -157,6 +162,7 @@ const PriceList = () => {
         const newFilterStates = {
             'service-type-1': false,
             'service-type-2': false,
+            'service-type-3': false,
             'engine': false,
             'electric stacker': false,
             'controlled bridge': false,
@@ -190,10 +196,7 @@ const PriceList = () => {
                             className="search__input"
                         />
 
-                        <div
-                            onClick={applyFiltersAndSearch} 
-                            className="search__button"
-                        >
+                        <div onClick={applyFiltersAndSearch} className="search__button">
                             <div className="button__text">Поиск</div>
                             <img className="magnifier" src={PriceListMagnifier} alt="Поиск" />
                         </div>
@@ -273,6 +276,19 @@ const PriceList = () => {
                                                 />
                                                 <div className="element__text">
                                                     <label htmlFor="element-service-2">Для ричтраков и электропогрузчиков</label>
+                                                </div>
+                                            </div>
+
+                                            <div className="element">
+                                                <input 
+                                                    checked={filterPoints['service-type-3']}
+                                                    onChange={setServiceType3}
+                                                    type="checkbox" 
+                                                    id="element-service-3" 
+                                                    className="element__checkbox" 
+                                                />
+                                                <div className="element__text">
+                                                    <label htmlFor="element-service-3">Для автопогрузчиков</label>
                                                 </div>
                                             </div>
                                         </motion.div>
@@ -437,7 +453,16 @@ const PriceList = () => {
 
                     <div className="help__text">
                         <div className="content">
-                            В наличии и под заказ оригинальные, а также неоригинальные запасные части высокого качества, колеса, ролики, расходные материалы и дополнительное оборудование для складской и грузоподъемной техники ведущих европейских и японских производителей: ТСМ, Toyota, BT, Komatsu, Mitsubishi, Nissan, Linde, STILL, Jungheinrich, OM, Daewoo, Doosan, Hyster, Yale, Crown, Nichiyu, Hyundai, CLARK, KALMAR. Более 10000 наименований запасных частей на складе в Москве, доставка от 2х дней.
+                            В наличии и под заказ оригинальные, а также неоригинальные запасные части 
+                            высокого качества, колеса, ролики, расходные материалы и дополнительное 
+                            оборудование для складской и грузоподъемной техники ведущих европейских и 
+                            японских производителей: ТСМ, Toyota, BT, Komatsu, Mitsubishi, Nissan, Linde,
+                            STILL, Jungheinrich, OM, Daewoo, Doosan, Hyster, Yale, Crown, Nichiyu, Hyundai, CLARK, KALMAR. 
+                            Более 10000 наименований запасных частей на складе в Москве, доставка от 2х дней.
+                            
+                            <p>
+                                Количество нормо-часов для выполнения работ носят ознакомительный характер. Все работы согласовываются с сервис-менеджером.		
+                            </p>
                         </div>
                     </div>
                 </div>

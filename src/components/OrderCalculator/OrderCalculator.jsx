@@ -20,7 +20,9 @@ import './OrderCalculator.scss';
 
 const OrderCalculatorItemMobile = ({ id, title, price, count, group }) => {
     
-    const isSpares = group !== 'service-type-1' && group !== 'service-type-2'
+    const isSpares = group !== 'service-type-1' 
+                    && group !== 'service-type-2' 
+                    && group !== 'service-type-3'
 
     const dispatch = useDispatch()
     
@@ -90,8 +92,6 @@ const OrderCalculatorItemMobile = ({ id, title, price, count, group }) => {
                     </>
                 )}
             </div>
-
-            
         </div>
     )
 }
@@ -99,7 +99,9 @@ const OrderCalculatorItemMobile = ({ id, title, price, count, group }) => {
 
 const OrderCalculatorItem = ({ id, title, article, price, count, group }) => {
 
-    const isSpares = group !== 'service-type-1' && group !== 'service-type-2'
+    const isSpares = group !== 'service-type-1' 
+                    && group !== 'service-type-2'
+                    && group !== 'service-type-3'
 
     const dispatch = useDispatch()
     

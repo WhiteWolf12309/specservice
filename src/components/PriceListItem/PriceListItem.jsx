@@ -9,7 +9,7 @@ import './PriceListItem.scss';
 const PriceListItem = ({ id, title, article, price, group, addition }) => {
 
     const dispatch = useDispatch()
-    const isSpare = group !== 'service-type-1' && group !== 'service-type-2'
+    const isSpare = group !== 'service-type-1' && group !== 'service-type-2' && group !== 'service-type-3'
 
     const addToOrderCalculator = () => dispatch(addProductItem({ id, title, article, price, group }))
     const addServiceToOrderCalculator = () => dispatch(addService({ id, title, addition, price, group }))
@@ -25,6 +25,7 @@ const PriceListItem = ({ id, title, article, price, group, addition }) => {
                 transition={{ type: 'linear' }}
                 >
                 <div className="products__inner__item__title">{title}</div>
+                
                 { article && (
                     <div className="products__inner__item__article"> 
                         <div className="article-title">Артикул:</div>

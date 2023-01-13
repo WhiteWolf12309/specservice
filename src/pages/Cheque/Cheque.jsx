@@ -79,7 +79,7 @@ const Cheque = () => {
                                     <div className="item__article">Артикул: {item.article}</div>
                                 </div>
 
-                                {item.group !== 'service-type-1' && item.group !== 'service-type-2' ? (
+                                {item.group !== 'service-type-1' && item.group !== 'service-type-2' && item.group !== 'service-type-3' ? (
                                     <div className="content__item__price">Цена по запросу</div>
                                 ) : (
                                     <div className="content__item__price">{item.price} нормо-час</div>
