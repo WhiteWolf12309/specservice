@@ -8,7 +8,7 @@ const AdditionalServices = () => {
         <div className='additional-services'>
             <div className="container">
                 <div className="additional-services__inner">
-                    <SectionTitle title={"Дополнительные услуги"} />
+                    <SectionTitle title={"Техническое обслуживание автопогрузчиков"} />
         
                     <div className="content">
                         
