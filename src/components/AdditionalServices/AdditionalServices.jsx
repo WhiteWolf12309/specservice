@@ -22,16 +22,6 @@ const AdditionalServices = () => {
                             </div>
                             <div className="content__item__price"><span>2</span> Нормо-часа</div>
                         </div>
-                        
-                        <div className="content__item">
-                            <div className="content__item__title">Техническое обслуживание (ТО) автопогрузчиков  №2 (через каждые 1000 моточасов, но не реже 1 раза в 6 месяцев)</div>
-                            <div className="content__item__list">
-                                <div className="list__item">Работы проводимые при ТО №1</div>
-                                <div className="list__item">Замена топливных фильтров</div>
-                                <div className="list__item">Замена воздушного фильтра</div>
-                            </div>
-                            <div className="content__item__price"><span>3</span> Нормо-часа</div>
-                        </div>
 
                         <div className="content__item">
                             <div className="content__item__title">Техническое обслуживание № 3 (через каждые 2000 моточасов, но не реже 1 раза в год)</div>
@@ -43,7 +33,7 @@ const AdditionalServices = () => {
                             </div>
                             <div className="content__item__price"><span>7</span> Нормо-часов</div>
                         </div>
-                        
+
                         <div className="content__item">
                             <div className="content__item__title">Техническое обслуживание № 4 (через каждые 3000 моточасов, но не реже 1 раза в 2 года)</div>
                             <div className="content__item__list">
@@ -55,6 +45,17 @@ const AdditionalServices = () => {
                                 <div className="list__item">Замена тормозной жидкости</div>
                             </div>
                             <div className="content__item__price"><span>10</span> Нормо-часов</div>
+                        </div>                        
+                        
+
+                        <div className="content__item">
+                            <div className="content__item__title">Техническое обслуживание (ТО) автопогрузчиков  №2 (через каждые 1000 моточасов, но не реже 1 раза в 6 месяцев)</div>
+                            <div className="content__item__list">
+                                <div className="list__item">Работы проводимые при ТО №1</div>
+                                <div className="list__item">Замена топливных фильтров</div>
+                                <div className="list__item">Замена воздушного фильтра</div>
+                            </div>
+                            <div className="content__item__price"><span>3</span> Нормо-часа</div>
                         </div>
                         
                     </div>
