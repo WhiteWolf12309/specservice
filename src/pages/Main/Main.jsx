@@ -1,6 +1,7 @@
 
 import React from 'react';
 import AboutUs from '../../components/AboutUs/AboutUs';
+import AdditionalServices from '../../components/AdditionalServices/AdditionalServices';
 import Advantages from '../../components/Advantages/Advantages';
 import Diagnostics from '../../components/Diagnostics/Diagnostics';
 import Footer from '../../components/Footer/Footer';
@@ -18,6 +19,7 @@ const Main = () => {
             <Diagnostics />
             <AboutUs />
             <PriceList />
+            <AdditionalServices />
             <Vacancy />
             <Footer />
         </div>
