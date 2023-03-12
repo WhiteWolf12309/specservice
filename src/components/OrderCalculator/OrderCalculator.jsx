@@ -268,8 +268,8 @@ const OrderCalculator = () => {
                                     </div>
                                     <Trash className={"trash__img"} fill={"#343434"} />
                                 </div>        
-                                <a href='tel:+7 908 636 29 37' className="footer__buttons__call">
-                                    <div  className="call__phone-number">+7 908 636 29 37</div>
+                                <a href='tel:+79041714528' className="footer__buttons__call">
+                                    <div  className="call__phone-number">+7 904 171 45 28</div>
                                     <HeaderPhone className={"call__img"} fill={"#CF9A11"} />
                                 </a>
                                 <Link 
